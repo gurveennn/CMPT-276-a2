@@ -1,0 +1,22 @@
+#form {
+    margin: auto 500px auto 50px;
+}
+
+#header {
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Merriweather";
+}
+
+.form-group{
+    font-family: "Merriweather";
+    padding-bottom: 10px;
+}
+
+#submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: cadetblue;
+    border: cadetblue;
+}

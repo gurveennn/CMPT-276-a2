@@ -1,0 +1,36 @@
+#headerName {
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Merriweather";
+}
+
+.rectangle {
+    margin-left: 50px; 
+    margin-bottom: 20px;
+}
+
+#form {
+    margin-left: 50px; 
+    margin-bottom: 20px; 
+    font-family: "Merriweather"; 
+}
+
+#save {
+    margin-top: 15px;
+    background-color:cadetblue;
+    border: cadetblue;
+}
+
+#backButton {
+    margin-left: 50px;  
+    margin-bottom: 50px;
+}
+
+#tableHaeder {
+    font-size: larger;
+}
+
+td {
+    width: 250px;
+}

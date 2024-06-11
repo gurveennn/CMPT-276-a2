@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display the chosen rectangle</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/showRectangle.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <h1 id="headerName" th:each="rectangle:${re}" th:text="${rectangle.name}"></h1>
+    <div class="rectangle" th:each="rectangle:${re}"
+         th:style="'background-color: ' + ${rectangle.color} + '; width: ' + ${rectangle.width}*${20} + 'px; height: ' + ${rectangle.height}*${20} + 'px;'">
+    </div>
+
+    <form id="form" action="/rectangles/updateRectangle" method="post">
+      <div th:each="rectangle:${re}">
+        <input type="hidden" name="rid" th:value="${rectangle.rid}">
+      </div>
+      
+      <table class="rectangleTable">
+        <thead>
+          <tr>
+            <th id="tableHeader" scope="col">Attributes</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody th:each="rectangle:${re}">
+          <tr>
+            <td>Name</td>
+            <td>
+              <input type="text" name="name" th:value="${rectangle.name}" class="form-control">
+            </td>
+          </tr>
+          <tr>
+            <td>Width</td>
+            <td> 
+              <input type="text" name="width" th:value="${rectangle.width}" class="form-control"> 
+            </td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>
+              <input type="text" name="height" th:value="${rectangle.height}" class="form-control"> 
+            </td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>
+              <input type="text" name="color" th:value="${rectangle.color}" class="form-control"> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="save" class="btn btn-dark">Save</button>
+    </form>
+
+    <button onclick="location.href='/rectangles/view'" class="btn btn-dark" id="backButton">Back</button>
+
+</body>
+</html>

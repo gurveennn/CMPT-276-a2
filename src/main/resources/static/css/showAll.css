@@ -1,0 +1,19 @@
+#header {
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Merriweather";
+}
+
+main {
+    margin: auto 400px auto 50px;
+}
+
+#des {
+    font-family: "Merriweather"; 
+}
+
+#addButton {
+    background-color: cadetblue;
+    border: cadetblue;
+}
